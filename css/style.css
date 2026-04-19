@@ -1,0 +1,92 @@
+/* Global */
+/* Make footer stick at bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+ 
+}
+
+main {
+  flex: 1;              /* stretch to fill */
+  display: flex;        /* allow children to align */
+  flex-direction: column;
+}
+
+
+body {
+ 
+  font-family: 'Poppins', sans-serif;
+  
+ background: 
+    linear-gradient(135deg, rgba(74,0,224,0.85), rgba(142,45,226,0.85), rgba(0,198,255,0.85));
+   
+  
+  background-size: cover;    
+  background-position: center; 
+  background-attachment: fixed; 
+  
+  background-blend-mode: overlay; 
+  background-size: 300% 300%;
+  animation: gradientBG 12s ease infinite;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+   min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.hero h1 {
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Search Box */
+.search-box {
+  max-width: 900px;
+  margin: auto;
+  transition: transform 0.3s;
+}
+.search-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Features Section */
+.bg-light h5,
+.bg-light h2 {
+  color: #111 !important;
+}
+.bg-light p {
+  color: #444 !important;
+}
+
+/* Popular Routes */
+section .bg-dark {
+  transition: transform 0.3s, background 0.3s;
+}
+section .bg-dark:hover {
+  transform: translateY(-5px);
+  background: #222;
+}
+
+footer {
+  margin-top: auto;   /* pushes footer to bottom */
+  background: #222;   /* your dark background */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
